@@ -6,3 +6,11 @@ G:\Visual Studio 2022\Generador de Datos - IoT\obj\Debug\Generador de Datos - Io
 G:\Visual Studio 2022\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.CoreCompileInputs.cache
 G:\Visual Studio 2022\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.exe
 G:\Visual Studio 2022\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.pdb
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\Generador de Datos - IoT.exe.config
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\Generador de Datos - IoT.exe
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\Generador de Datos - IoT.pdb
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.exe
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.pdb
