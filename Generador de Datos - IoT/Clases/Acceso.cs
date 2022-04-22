@@ -12,7 +12,7 @@ namespace Generador_de_Datos___IoT.Clases
     internal class Acceso
     {
 
-        const string nombreDB = "Sensor";
+        const string nombreDB = "AgroTech";
         const string idStringConexion = "DB";
 
         public static string ObtenerCadenaConexion(string id)

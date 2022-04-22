@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Generador_de_Datos___IoT.Clases;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -139,7 +140,7 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorTemperatura() 
         {
-            int envios = 0, dato;
+            int envios = 0, dato, sector;
             string nombre = "Temperatura" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("Temperatura");
@@ -147,36 +148,45 @@ namespace Generador_de_Datos___IoT
             if (opcT == TipoTemperatura.Frio)
             {
                 dato = ran.Next(13, 16);
+                sector = ran.Next(1, 4);
 
                 for (int i=0; i<500; i++)
                 {
                     sw.WriteLine(dato);
+                    Sensor DatoSensor = new Sensor("Temperatura", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
                     envios++;
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if(envios == 100)
                     {
                         dato = ran.Next(13, 16);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
+
                 }
             }
             else if(opcT == TipoTemperatura.Templado)
             {
                 dato = ran.Next(16, 21);
+                sector = ran.Next(1, 4);
 
                 for (int i = 0; i < 500; i++)
                 {
                     sw.WriteLine(dato);
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    Sensor DatoSensor = new Sensor("Temperatura", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if (envios == 100)
                     {
                         dato = ran.Next(16, 21);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
                 }
@@ -184,17 +194,21 @@ namespace Generador_de_Datos___IoT
             else
             {
                 dato = ran.Next(21, 24);
+                sector = ran.Next(1, 4);
 
                 for (int i = 0; i < 500; i++)
                 {
                     sw.WriteLine(dato);
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    Sensor DatoSensor = new Sensor("Temperatura", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if (envios == 100)
                     {
                         dato = ran.Next(21, 24);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
                 }
@@ -205,7 +219,7 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorHumedadRelativa()
         {
-            int envios = 0, dato;
+            int envios = 0, dato, sector;
             string nombre = "Humedad Relativa" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("Humedad Relativa");
@@ -213,18 +227,22 @@ namespace Generador_de_Datos___IoT
             if (opcT == TipoTemperatura.Frio)
             {
                 dato = ran.Next(81, 84);
+                sector = ran.Next(1, 4);
 
                 for (int i = 0; i < 500; i++)
                 {
                     sw.WriteLine(dato + "%");
+                    Sensor DatoSensor = new Sensor("Humedad Relativa", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
                     envios++;
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if (envios == 100)
                     {
                         dato = ran.Next(81, 84);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
                 }
@@ -232,17 +250,21 @@ namespace Generador_de_Datos___IoT
             else if (opcT == TipoTemperatura.Templado)
             {
                 dato = ran.Next(78, 80);
+                sector = ran.Next(1, 4);
 
                 for (int i = 0; i < 500; i++)
                 {
                     sw.WriteLine(dato + "%");
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    Sensor DatoSensor = new Sensor("Humedad Relativa", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if (envios == 100)
                     {
                         dato = ran.Next(78, 80);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
                 }
@@ -250,17 +272,21 @@ namespace Generador_de_Datos___IoT
             else
             {
                 dato = ran.Next(75, 77);
+                sector = ran.Next(1, 4);
 
                 for (int i = 0; i < 500; i++)
                 {
                     sw.WriteLine(dato + "%");
-                    var stopwatch = Stopwatch.StartNew();
-                    Thread.Sleep(mili); //tiempo de pausa
-                    stopwatch.Stop();
+                    Sensor DatoSensor = new Sensor("Humedad Relativa", dato, sector);
+                    Acceso.InsertarRegistro("Sensor", DatoSensor);
+                    //var stopwatch = Stopwatch.StartNew();
+                    //Thread.Sleep(mili); //tiempo de pausa
+                    //stopwatch.Stop();
 
                     if (envios == 100)
                     {
                         dato = ran.Next(75, 77);
+                        sector = ran.Next(1, 4);
                         envios = 0;
                     }
                 }
@@ -271,23 +297,27 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorCalidadAire()
         {
-            int envios = 0, dato, cambio;
+            int envios = 0, dato, cambio, sector;
             string nombre = "Calidad Aire" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("Calidad Aire");
 
             dato = ran.Next(40, 80);
+            sector = ran.Next(1, 4);
 
             for (int i = 0; i < 500; i++)
             {
                 sw.WriteLine(dato);
-                var stopwatch = Stopwatch.StartNew();
-                Thread.Sleep(mili); //tiempo de pausa
-                stopwatch.Stop();
+                Sensor DatoSensor = new Sensor("Calidad Aire", dato, sector);
+                Acceso.InsertarRegistro("Sensor", DatoSensor);
+                //var stopwatch = Stopwatch.StartNew();
+                //Thread.Sleep(mili); //tiempo de pausa
+                //stopwatch.Stop();
 
                 if (envios == 100)
                 {
                     cambio = ran.Next(0, 2);
+                    sector = ran.Next(1, 4);
                     if (cambio == 0) dato += 5;
                     else dato -= 5;
                     envios = 0;
@@ -299,23 +329,27 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorIntensidadLuminica()
         {
-            int envios = 0, dato;
+            int envios = 0, dato, sector;
             string nombre = "Intensidad Luminica" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("Intensidad Luminica");
 
             dato = ran.Next(1, 40001);
+            sector = ran.Next(1, 4);
 
             for (int i = 0; i < 500; i++)
             {
                 sw.WriteLine(dato + " Lux");
-                var stopwatch = Stopwatch.StartNew();
-                Thread.Sleep(mili); //tiempo de pausa
-                stopwatch.Stop();
+                Sensor DatoSensor = new Sensor("Intensidad Luminica", dato, sector);
+                Acceso.InsertarRegistro("Sensor", DatoSensor);
+                //var stopwatch = Stopwatch.StartNew();
+                //Thread.Sleep(mili); //tiempo de pausa
+                //stopwatch.Stop();
 
                 if (envios == 20)
                 {
                     dato = ran.Next(1, 40001);
+                    sector = ran.Next(1, 4);
                     envios = 0;
                 }
             }
@@ -325,16 +359,19 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorHumedadSuelo()
         {
-            int envios = 0, dato;
+            int envios = 0, dato, sector;
             string nombre = "Humedad Suelo" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("Humedad Suelo");
 
             dato = ran.Next(0, 1025);
+            sector = ran.Next(1, 4);
 
             for (int i = 0; i < 500; i++)
             {
                 sw.WriteLine(dato);
+                Sensor DatoSensor = new Sensor("Humedad Suelo", dato, sector);
+                Acceso.InsertarRegistro("Sensor", DatoSensor);
                 var stopwatch = Stopwatch.StartNew();
                 Thread.Sleep(mili); //tiempo de pausa
                 stopwatch.Stop();
@@ -342,6 +379,7 @@ namespace Generador_de_Datos___IoT
                 if (envios == 100)
                 {
                     dato = ran.Next(0, 1025);
+                    sector = ran.Next(1, 4);
                     envios = 0;
                 }
             }
@@ -351,23 +389,27 @@ namespace Generador_de_Datos___IoT
 
         public static void GeneradorPH()
         {
-            int envios = 0, dato;
+            int envios = 0, dato, sector;
             string nombre = "PH" + contador++.ToString();
             StreamWriter sw = new StreamWriter("G:\\" + nombre + ".txt");
             sw.WriteLine("PH");
 
             dato = ran.Next(0, 15);
+            sector = ran.Next(1, 4);
 
             for (int i = 0; i < 500; i++)
             {
                 sw.WriteLine(dato);
-                var stopwatch = Stopwatch.StartNew();
-                Thread.Sleep(mili); //tiempo de pausa
-                stopwatch.Stop();
+                Sensor DatoSensor = new Sensor("PH", dato, sector);
+                Acceso.InsertarRegistro("Sensor", DatoSensor);
+                //var stopwatch = Stopwatch.StartNew();
+                //Thread.Sleep(mili); //tiempo de pausa
+                //stopwatch.Stop();
 
                 if (envios == 100)
                 {
                     dato = ran.Next(0, 15);
+                    sector = ran.Next(1, 4);
                     envios = 0;
                 }
             }

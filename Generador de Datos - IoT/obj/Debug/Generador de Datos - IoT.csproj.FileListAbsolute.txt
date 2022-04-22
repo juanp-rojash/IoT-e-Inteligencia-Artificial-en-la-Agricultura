@@ -14,3 +14,38 @@ C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Gener
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.exe
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.pdb
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\libzstd.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\snappy32.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\snappy64.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\libsnappy64.so
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\libzstd.so
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\libsnappy64.dylib
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\libzstd.dylib
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\mongocrypt.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\DnsClient.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Bson.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Driver.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\SharpCompress.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Buffers.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Memory.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Security.AccessControl.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\DnsClient.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Bson.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Driver.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Buffers.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Memory.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\Generador de Datos - IoT\obj\Debug\Generador de Datos - IoT.csproj.CopyComplete
