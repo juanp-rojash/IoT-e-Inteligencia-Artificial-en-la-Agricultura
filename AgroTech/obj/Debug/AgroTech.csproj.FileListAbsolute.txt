@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\AgroTech\bin\Debug\AgroTech.exe.config
+C:\Users\User\source\repos\AgroTech\bin\Debug\AgroTech.exe
+C:\Users\User\source\repos\AgroTech\bin\Debug\AgroTech.pdb
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.Form1.resources
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.Properties.Resources.resources
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.Sensoriado.resources
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.csproj.GenerateResource.cache
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.exe
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.pdb
+C:\Users\User\source\repos\AgroTech\obj\Debug\AgroTech.DronSense.resources
