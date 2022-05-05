@@ -32,8 +32,6 @@
             this.comboBoxTipoSensor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewInfo = new System.Windows.Forms.DataGridView();
-            this.Dato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBoxSensorSector = new System.Windows.Forms.PictureBox();
             this.listBoxSugerencia = new System.Windows.Forms.ListBox();
             this.textBoxSugerencia = new System.Windows.Forms.TextBox();
@@ -52,6 +50,7 @@
             this.comboBoxTipoSensor.Name = "comboBoxTipoSensor";
             this.comboBoxTipoSensor.Size = new System.Drawing.Size(189, 24);
             this.comboBoxTipoSensor.TabIndex = 0;
+            this.comboBoxTipoSensor.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipoSensor_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -70,27 +69,13 @@
             this.dataGridViewInfo.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridViewInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Dato,
-            this.Sector});
             this.dataGridViewInfo.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewInfo.Location = new System.Drawing.Point(224, 12);
             this.dataGridViewInfo.Name = "dataGridViewInfo";
             this.dataGridViewInfo.ReadOnly = true;
             this.dataGridViewInfo.Size = new System.Drawing.Size(244, 590);
             this.dataGridViewInfo.TabIndex = 2;
-            // 
-            // Dato
-            // 
-            this.Dato.HeaderText = "Dato";
-            this.Dato.Name = "Dato";
-            this.Dato.ReadOnly = true;
-            // 
-            // Sector
-            // 
-            this.Sector.HeaderText = "Sector";
-            this.Sector.Name = "Sector";
-            this.Sector.ReadOnly = true;
+            this.dataGridViewInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInfo_CellClick);
             // 
             // pictureBoxSensorSector
             // 
@@ -154,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sensoriado";
             this.Text = "Sensoriado";
+            this.Load += new System.EventHandler(this.Sensoriado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorSector)).EndInit();
             this.ResumeLayout(false);
@@ -166,8 +152,6 @@
         private System.Windows.Forms.ComboBox comboBoxTipoSensor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sector;
         private System.Windows.Forms.PictureBox pictureBoxSensorSector;
         private System.Windows.Forms.ListBox listBoxSugerencia;
         private System.Windows.Forms.TextBox textBoxSugerencia;

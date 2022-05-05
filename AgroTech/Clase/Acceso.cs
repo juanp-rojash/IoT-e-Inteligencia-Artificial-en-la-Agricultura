@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using System.Configuration;
+using MongoDB.Bson;
 
 namespace AgroTech.Clase
 {
@@ -19,22 +20,30 @@ namespace AgroTech.Clase
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
-        /*public static List<T> ObtenerRegistros<T>(IMongoDatabase unaDB, string nombreColeccion)
+        public static List<T> ObtenerRegistros<T>(IMongoDatabase unaDB, string nombreColeccion)
         {
             var unaColeccion = unaDB.GetCollection<T>(nombreColeccion);
             return (unaColeccion.Find(new BsonDocument()).ToList());
         }
-        */
+        
 
-        public static void InsertarRegistro<T>(string coleccion, T registro)
+        public static List<Sensor> InfoSensor(string nombre, string coleccion)
         {
 
             string cadenaConexion = ObtenerCadenaConexion(idStringConexion);
             MongoClient clienteDB = new MongoClient(cadenaConexion);
-            var miDB = clienteDB.GetDatabase(nombreDB);
 
-            var unaColeccion = miDB.GetCollection<T>(coleccion);
-            unaColeccion.InsertOne(registro);
+            var miDB = clienteDB.GetDatabase(nombreDB);
+            var coleccionProductos = miDB.GetCollection<Sensor>(coleccion);
+
+            var filtroSensor = new BsonDocument {
+                { "tipo", nombre }
+            };
+
+            var producto = coleccionProductos.Find(filtroSensor).ToList();
+
+            return producto;
+
         }
 
     }

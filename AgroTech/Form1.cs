@@ -12,20 +12,24 @@ namespace AgroTech
 {
     public partial class Form1 : Form
     {
+
+        Form f1 = new Sensoriado();
+        Form f2 = new DronSense();
+
         public Form1()
         {
             InitializeComponent();
-            AbrirForm(new Sensoriado());
+            AbrirForm(f1);
         }
 
         private void buttonSensoriado_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Sensoriado());
+            AbrirForm(f1);
         }
 
         private void buttonDron_Click(object sender, EventArgs e)
         {
-            AbrirForm(new DronSense());
+            AbrirForm(f2);
         }
 
         private void AbrirForm(object form)
@@ -40,6 +44,11 @@ namespace AgroTech
             this.panelContenedor.Controls.Add(fnuevo);
             this.panelContenedor.Tag = fnuevo;
             fnuevo.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
