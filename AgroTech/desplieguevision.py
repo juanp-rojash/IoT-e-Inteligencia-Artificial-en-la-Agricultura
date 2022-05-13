@@ -3,8 +3,11 @@ def PrediccionFresa(namefile):
   import pandas as pd
   import matplotlib.pyplot as plt
 
+  import requests as req
+  from io import BytesIO
   from PIL import Image
   import os, sys
+  import cv2
 
   from tensorflow import keras
   model_deep = keras.models.load_model('model_deep.h5')
@@ -17,8 +20,9 @@ def PrediccionFresa(namefile):
   mat_hist=[]
   nombres=[]
 
-  img = Image.open(namefile)
-  img=img.resize((300,300))
+  response = req.get(namefile)
+  img = Image.open(BytesIO(response.content))
+  img = img.resize((300,300))
 
   hist = img.histogram()
 
@@ -33,5 +37,3 @@ def PrediccionFresa(namefile):
   Y_fut=np.argmax(Y_fut, axis=1)
 
   return (labelencoder.inverse_transform(Y_fut))
-
-

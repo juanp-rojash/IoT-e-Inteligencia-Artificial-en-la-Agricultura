@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,13 +54,12 @@ namespace AgroTech
 
         private void dataGridViewInfo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //var fila = dataGridViewInfo.SelectedRows[0];
+            int filaDato = int.Parse(dataGridViewInfo.CurrentCell.Value.ToString());
+            
 
-            //if((DataRow)fila["Sector"] == 1)
-
-            //if(dataGridViewInfo.SelectedRows[0].Equals("1"))pictureBoxSensorSector.Image = Image.FromFile("C:\\Users\\User\\source\\repos\\IoT-e-Inteligencia-Artificial-en-la-Agricultura\\AgroTech\\Img\\FrameSector1.png");
-            //else if(dataGridViewInfo.SelectedRows[1].Equals("2")) pictureBoxSensorSector.Image = Image.FromFile("C:\\Users\\User\\source\\repos\\IoT-e-Inteligencia-Artificial-en-la-Agricultura\\AgroTech\\Img\\FrameSector2.png");
-            //else if(dataGridViewInfo.SelectedRows[1].Equals("3")) pictureBoxSensorSector.Image = Image.FromFile("C:\\Users\\User\\source\\repos\\IoT-e-Inteligencia-Artificial-en-la-Agricultura\\AgroTech\\Img\\FrameSector3.png");
+            if (filaDato == 1) pictureBoxSensorSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector1.png"));
+            else if(filaDato == 2) pictureBoxSensorSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector2.png"));
+            else if(filaDato == 3) pictureBoxSensorSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector3.png"));
         }
     }
 }
