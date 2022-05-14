@@ -1,10 +1,13 @@
 def PrediccionFresa(namefile):
   import numpy as np
   import pandas as pd
+  import matplotlib.pyplot as plt
 
   import requests as req
   from io import BytesIO
   from PIL import Image
+  import os, sys
+  import cv2
 
   from tensorflow import keras
   model_deep = keras.models.load_model('C:\model_deep.h5')

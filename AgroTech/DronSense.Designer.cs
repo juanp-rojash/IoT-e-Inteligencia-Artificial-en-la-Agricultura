@@ -28,18 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DronSense));
             this.listBoxHallazgo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxFresa = new System.Windows.Forms.PictureBox();
             this.pictureBoxDronSector = new System.Windows.Forms.PictureBox();
+            this.hallazgoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDronSector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hallazgoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxHallazgo
             // 
             this.listBoxHallazgo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.listBoxHallazgo.DataSource = this.hallazgoBindingSource;
+            this.listBoxHallazgo.DisplayMember = "Url";
             this.listBoxHallazgo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxHallazgo.ForeColor = System.Drawing.Color.White;
             this.listBoxHallazgo.FormattingEnabled = true;
@@ -48,6 +53,7 @@
             this.listBoxHallazgo.Name = "listBoxHallazgo";
             this.listBoxHallazgo.Size = new System.Drawing.Size(207, 116);
             this.listBoxHallazgo.TabIndex = 0;
+            this.listBoxHallazgo.SelectedIndexChanged += new System.EventHandler(this.listBoxHallazgo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -82,6 +88,10 @@
             this.pictureBoxDronSector.TabIndex = 3;
             this.pictureBoxDronSector.TabStop = false;
             // 
+            // hallazgoBindingSource
+            // 
+            this.hallazgoBindingSource.DataSource = typeof(AgroTech.Clase.Hallazgo);
+            // 
             // DronSense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +107,7 @@
             this.Text = "DronSense";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDronSector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hallazgoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxFresa;
         private System.Windows.Forms.PictureBox pictureBoxDronSector;
+        private System.Windows.Forms.BindingSource hallazgoBindingSource;
     }
 }

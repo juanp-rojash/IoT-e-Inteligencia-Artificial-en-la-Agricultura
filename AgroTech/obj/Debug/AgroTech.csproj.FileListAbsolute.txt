@@ -76,3 +76,4 @@ C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\AgroT
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\AgroTech\bin\Debug\Microsoft.Dynamic.xml
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\AgroTech\bin\Debug\Microsoft.Scripting.xml
 C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\AgroTech\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\User\source\repos\IoT-e-Inteligencia-Artificial-en-la-Agricultura\AgroTech\bin\Debug\desplieguevision.py

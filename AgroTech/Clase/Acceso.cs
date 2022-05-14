@@ -11,7 +11,6 @@ namespace AgroTech.Clase
 {
     internal class Acceso
     {
-
         const string nombreDB = "AgroTech";
         const string idStringConexion = "DB";
 
@@ -44,6 +43,19 @@ namespace AgroTech.Clase
 
             return producto;
 
+        }
+
+        public static List<Fresa> requeImagen()
+        {
+            List<Fresa> Fproducto = new List<Fresa>();
+
+            string cadenaConexion = ObtenerCadenaConexion(idStringConexion);
+            MongoClient clienteDB = new MongoClient(cadenaConexion);
+
+            var miDB = clienteDB.GetDatabase(nombreDB);
+            var coleccionFresas = ObtenerRegistros<Fresa>(miDB, "Fresa");;
+
+            return coleccionFresas;
         }
 
     }
