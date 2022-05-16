@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxFresa = new System.Windows.Forms.PictureBox();
             this.pictureBoxDronSector = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.hallazgoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDronSector)).BeginInit();
@@ -51,8 +52,9 @@
             this.listBoxHallazgo.ItemHeight = 16;
             this.listBoxHallazgo.Location = new System.Drawing.Point(12, 54);
             this.listBoxHallazgo.Name = "listBoxHallazgo";
-            this.listBoxHallazgo.Size = new System.Drawing.Size(353, 116);
+            this.listBoxHallazgo.Size = new System.Drawing.Size(450, 116);
             this.listBoxHallazgo.TabIndex = 0;
+            this.listBoxHallazgo.ValueMember = "Url";
             this.listBoxHallazgo.SelectedIndexChanged += new System.EventHandler(this.listBoxHallazgo_SelectedIndexChanged);
             // 
             // hallazgoBindingSource
@@ -77,6 +79,7 @@
             this.pictureBoxFresa.Location = new System.Drawing.Point(12, 194);
             this.pictureBoxFresa.Name = "pictureBoxFresa";
             this.pictureBoxFresa.Size = new System.Drawing.Size(450, 388);
+            this.pictureBoxFresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxFresa.TabIndex = 2;
             this.pictureBoxFresa.TabStop = false;
             // 
@@ -91,6 +94,11 @@
             this.pictureBoxDronSector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxDronSector.TabIndex = 3;
             this.pictureBoxDronSector.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 2000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // DronSense
             // 
@@ -120,5 +128,6 @@
         private System.Windows.Forms.PictureBox pictureBoxFresa;
         private System.Windows.Forms.PictureBox pictureBoxDronSector;
         private System.Windows.Forms.BindingSource hallazgoBindingSource;
+        private System.Windows.Forms.Timer timer2;
     }
 }

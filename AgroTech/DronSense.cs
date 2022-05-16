@@ -15,51 +15,42 @@ namespace AgroTech
 {
     public partial class DronSense : Form
     {
-        List<Hallazgo> noticia = new List<Hallazgo>();
+        Hallazgo hz = new Hallazgo();
         public DronSense()
         {
             InitializeComponent();
-            iniciarControles();
+            hz.solicitudRepetida();
+            timer2.Start();
 
-        }
-
-        private void iniciarControles()
-        {
-            Hallazgo hz = new Hallazgo();
-            Hallazgo hzprueba = new Hallazgo();
-
-            var timer = new System.Timers.Timer(TimeSpan.FromMinutes(0.5).TotalMilliseconds); // se ejecutara cada 1 minutos
-            timer.Elapsed += (sender, e) =>
-            {
-                hzprueba = hz.analisisImagen();
-                if (hzprueba.Equals(null) == false)
-                {
-                    MessageBox.Show(hzprueba.Url + " -- " + hzprueba.Deterioro + " -- " + hzprueba.Sector);
-                    noticia.Add(hzprueba);
-                    listBoxHallazgo.DataSource = noticia;
-
-                }
-            };
-            timer.Start();
         }
 
         private void listBoxHallazgo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Hallazgo hz = listBoxHallazgo.SelectedItem as Hallazgo;
+            Hallazgo seleccion = (Hallazgo)listBoxHallazgo.SelectedItem;
 
-            WebRequest request = WebRequest.Create(hz.Url);
-            using (var response = request.GetResponse())
+            if(seleccion != null)
             {
-                using (var str = response.GetResponseStream())
+                WebRequest request = WebRequest.Create(seleccion.Url);
+                using (var response = request.GetResponse())
                 {
-                    pictureBoxFresa.Image = Bitmap.FromStream(str);
+                    using (var str = response.GetResponseStream())
+                    {
+                        pictureBoxFresa.Image = Bitmap.FromStream(str);
+                    }
                 }
+
+                if (seleccion.Sector == 1) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector1.png"));
+                else if (seleccion.Sector == 2) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector2.png"));
+                else if (seleccion.Sector == 3) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector3.png"));
             }
             
-            if (hz.Sector == 1) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector1.png"));
-            else if (hz.Sector == 2) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector2.png"));
-            else if (hz.Sector == 3) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector3.png"));
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            listBoxHallazgo.DataSource = null;
+            listBoxHallazgo.Items.Clear();
+            listBoxHallazgo.DataSource = hz.Noticia;
+        }
     }
 }

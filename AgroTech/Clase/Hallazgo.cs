@@ -15,6 +15,7 @@ namespace AgroTech.Clase
     internal class Hallazgo
     {
         private static Random r = new Random();
+        private List<Hallazgo> noticia = new List<Hallazgo>();
         private string url;
         private bool deterioro;
         private int sector;
@@ -33,6 +34,7 @@ namespace AgroTech.Clase
             Sector = sector;
         }
 
+        internal List<Hallazgo> Noticia { get => noticia; set => noticia = value; }
         public string Url { get => url; set => url = value; }
         public bool Deterioro { get => deterioro; set => deterioro = value; }
         public int Sector { get => sector; set => sector = value; }
@@ -64,14 +66,29 @@ namespace AgroTech.Clase
                 results = process.StandardOutput.ReadToEnd();
             }
 
-            /*if (results.Contains("fresasmalas"))
+            if (results.Contains("fresasmalas"))
             {
                 return new Hallazgo(fs.First().Url, true, fs.First().Sector);
             }
-            else return null;*/
+            else return null;
 
-            MessageBox.Show(results);
-            return new Hallazgo(fs.First().Url, true, fs.First().Sector);
         }
+
+        public void solicitudRepetida()
+        {
+            Hallazgo hzprueba = new Hallazgo();
+
+            var timer = new System.Timers.Timer(TimeSpan.FromMinutes(0.5).TotalMilliseconds); // se ejecutara cada 1 minutos
+            timer.Elapsed += (sender, e) =>
+            {
+                hzprueba = analisisImagen();
+                if (hzprueba != null)
+                {
+                    noticia.Add(hzprueba);
+                }
+            };
+            timer.Start();
+        }
+
     }
 }
