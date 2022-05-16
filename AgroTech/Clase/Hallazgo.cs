@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace AgroTech.Clase
 {
@@ -38,20 +39,38 @@ namespace AgroTech.Clase
 
         public Hallazgo analisisImagen()
         {
-            string pathpy = @"C:\desplieguevision.py";
-            ScriptRuntime py = Python.CreateRuntime();
-            dynamic pyPrograma = py.UseFile(pathpy);
-
             List<Fresa> fs = Acceso.requeImagen();
             fs.Sort((a, b) => r.Next(-1, 1));
 
-            var dato = pyPrograma.PrediccionFresa(fs.First().Url);
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"G:\Python\python.exe";
 
-            if (dato.equals("fresasmalas"))
+            var script = @"C:\desplieguevision.py";
+            var datourl = fs.First().Url;
+
+            psi.Arguments = $"\"{script}\" \"{datourl}\"";
+
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            var errors = "";
+            var results = "";
+
+            using (var process = Process.Start(psi))
+            {
+                errors = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+            }
+
+            /*if (results.Contains("fresasmalas"))
             {
                 return new Hallazgo(fs.First().Url, true, fs.First().Sector);
             }
-            else return null;
+            else return null;*/
+
+            return new Hallazgo(fs.First().Url, true, fs.First().Sector);
         }
     }
 }

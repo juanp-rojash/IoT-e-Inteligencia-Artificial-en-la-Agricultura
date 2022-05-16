@@ -24,12 +24,12 @@ namespace AgroTech
 
             Hallazgo hz = new Hallazgo();
 
-            var timer = new System.Timers.Timer(TimeSpan.FromMinutes(1).TotalMilliseconds); // se ejecutara cada 1 minutos
+            var timer = new System.Timers.Timer(TimeSpan.FromMinutes(0.5).TotalMilliseconds); // se ejecutara cada 1 minutos
             timer.Elapsed += async (sender, e) => {
-                hz = hz.analisisImagen();
-                if(hz != null)
+                if(hz.analisisImagen() != null)
                 {
                     noticia.Add(hz);
+                    listBoxHallazgo.DataSource = null;
                     listBoxHallazgo.DataSource = noticia;
                 }
             };
