@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sensoriado));
             this.comboBoxTipoSensor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewInfo = new System.Windows.Forms.DataGridView();
             this.pictureBoxSensorSector = new System.Windows.Forms.PictureBox();
             this.listBoxSugerencia = new System.Windows.Forms.ListBox();
+            this.sugerenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxSugerencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttonBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorSector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sugerenciaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxTipoSensor
@@ -92,6 +97,8 @@
             // listBoxSugerencia
             // 
             this.listBoxSugerencia.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.listBoxSugerencia.DataSource = this.sugerenciaBindingSource;
+            this.listBoxSugerencia.DisplayMember = "TipoSensor";
             this.listBoxSugerencia.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxSugerencia.ForeColor = System.Drawing.Color.White;
             this.listBoxSugerencia.FormattingEnabled = true;
@@ -100,6 +107,12 @@
             this.listBoxSugerencia.Name = "listBoxSugerencia";
             this.listBoxSugerencia.Size = new System.Drawing.Size(137, 164);
             this.listBoxSugerencia.TabIndex = 4;
+            this.listBoxSugerencia.ValueMember = "TipoSensor";
+            this.listBoxSugerencia.SelectedIndexChanged += new System.EventHandler(this.listBoxSugerencia_SelectedIndexChanged);
+            // 
+            // sugerenciaBindingSource
+            // 
+            this.sugerenciaBindingSource.DataSource = typeof(AgroTech.Clase.Sugerencia);
             // 
             // textBoxSugerencia
             // 
@@ -109,6 +122,7 @@
             this.textBoxSugerencia.Location = new System.Drawing.Point(636, 406);
             this.textBoxSugerencia.Multiline = true;
             this.textBoxSugerencia.Name = "textBoxSugerencia";
+            this.textBoxSugerencia.ReadOnly = true;
             this.textBoxSugerencia.Size = new System.Drawing.Size(397, 196);
             this.textBoxSugerencia.TabIndex = 5;
             // 
@@ -123,12 +137,28 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Sugerencias";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 150000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // buttonBorrar
+            // 
+            this.buttonBorrar.Location = new System.Drawing.Point(12, 565);
+            this.buttonBorrar.Name = "buttonBorrar";
+            this.buttonBorrar.Size = new System.Drawing.Size(206, 34);
+            this.buttonBorrar.TabIndex = 7;
+            this.buttonBorrar.Text = "Borrar Sugerencia";
+            this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
+            // 
             // Sensoriado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1064, 611);
+            this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxSugerencia);
             this.Controls.Add(this.listBoxSugerencia);
@@ -142,6 +172,7 @@
             this.Load += new System.EventHandler(this.Sensoriado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorSector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sugerenciaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +187,8 @@
         private System.Windows.Forms.ListBox listBoxSugerencia;
         private System.Windows.Forms.TextBox textBoxSugerencia;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource sugerenciaBindingSource;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button buttonBorrar;
     }
 }

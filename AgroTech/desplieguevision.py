@@ -22,7 +22,7 @@ labelencoder= pickle.load(open(filename, 'rb'))
 mat_hist=[] 
 nombres=[]
   
-response = req.get("https://www.consumer.es/app/uploads/2019/07/img_fresa-moho-hd.jpg")
+response = req.get(sys.argv[1])
   
 img = Image.open(BytesIO(response.content))  
 img = img.resize((300,300))

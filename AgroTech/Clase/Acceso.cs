@@ -45,6 +45,26 @@ namespace AgroTech.Clase
 
         }
 
+        public static List<Sensor> InfoSensorFiltrado(string nombre, int sector,  string coleccion)
+        {
+
+            string cadenaConexion = ObtenerCadenaConexion(idStringConexion);
+            MongoClient clienteDB = new MongoClient(cadenaConexion);
+
+            var miDB = clienteDB.GetDatabase(nombreDB);
+            var coleccionProductos = miDB.GetCollection<Sensor>(coleccion);
+
+            var filtroSensor = new BsonDocument {
+                { "tipo", nombre },
+                { "sector", sector }
+            };
+
+            var producto = coleccionProductos.Find(filtroSensor).ToList();
+
+            return producto;
+
+        }
+
         public static List<Fresa> requeImagen()
         {
             List<Fresa> Fproducto = new List<Fresa>();

@@ -121,7 +121,7 @@
   <data name="pictureBoxSensorSector.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA9AAAALjCAYAAAD6N+1fAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAVMRJREFUeF7t3Y1x3LiWNuANYUP4QpgQbgZyBp4MPBnYGcxmYGVgZ7Ah3BA2hAnB
+        DQAACw0B7QfALAAAVMRJREFUeF7t3Y1x3LiWNuANYUP4QpgQbgZyBp4MPBnYGcxmYGVgZ7Ah3BA2hAnB
         X726wi5vT/8ckAQpQc9TxZJbptQkcIQ6hwDZ//ELAAAAeEgBDQAAAAUKaAAAAChQQAMAAECBAhoAAAAK
         FNAAAABQoIAGAACAAgU0AAAAFCigAQAAoEABDQAAAAUKaAAAAChQQAMAAECBAhoAAAAKFNAAAABQoIAG
         AACAAgU0AAAAFCigAQAAoEABDQAAAAUKaAAAAChQQAMAAECBAhoAAAAKFNAAAABQoIAGAACAAgU0AAAA
@@ -486,4 +486,10 @@
         mEcAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="sugerenciaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>206, 17</value>
+  </metadata>
 </root>

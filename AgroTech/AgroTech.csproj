@@ -160,6 +160,7 @@
     <Compile Include="Clase\Acceso.cs" />
     <Compile Include="Clase\Fresa.cs" />
     <Compile Include="Clase\Hallazgo.cs" />
+    <Compile Include="Clase\Sugerencia.cs" />
     <Compile Include="DronSense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +214,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AgroTech.Clase.Acceso.datasource" />
     <None Include="Properties\DataSources\AgroTech.Clase.Hallazgo.datasource" />
+    <None Include="Properties\DataSources\AgroTech.Clase.Sugerencia.datasource" />
     <None Include="Properties\DataSources\AgroTech.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\AgroTech.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\DronSense.datasource" />
