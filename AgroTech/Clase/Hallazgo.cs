@@ -70,6 +70,7 @@ namespace AgroTech.Clase
             }
             else return null;*/
 
+            MessageBox.Show(results);
             return new Hallazgo(fs.First().Url, true, fs.First().Sector);
         }
     }

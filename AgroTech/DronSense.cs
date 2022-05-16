@@ -15,22 +15,29 @@ namespace AgroTech
 {
     public partial class DronSense : Form
     {
-
-        private List<Hallazgo> noticia = new List<Hallazgo>();
-
+        List<Hallazgo> noticia = new List<Hallazgo>();
         public DronSense()
         {
             InitializeComponent();
+            iniciarControles();
 
+        }
+
+        private void iniciarControles()
+        {
             Hallazgo hz = new Hallazgo();
+            Hallazgo hzprueba = new Hallazgo();
 
             var timer = new System.Timers.Timer(TimeSpan.FromMinutes(0.5).TotalMilliseconds); // se ejecutara cada 1 minutos
-            timer.Elapsed += async (sender, e) => {
-                if(hz.analisisImagen() != null)
+            timer.Elapsed += (sender, e) =>
+            {
+                hzprueba = hz.analisisImagen();
+                if (hzprueba.Equals(null) == false)
                 {
-                    noticia.Add(hz);
-                    listBoxHallazgo.DataSource = null;
+                    MessageBox.Show(hzprueba.Url + " -- " + hzprueba.Deterioro + " -- " + hzprueba.Sector);
+                    noticia.Add(hzprueba);
                     listBoxHallazgo.DataSource = noticia;
+
                 }
             };
             timer.Start();
@@ -53,5 +60,6 @@ namespace AgroTech
             else if (hz.Sector == 2) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector2.png"));
             else if (hz.Sector == 3) pictureBoxDronSector.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Img\\FrameSector3.png"));
         }
+
     }
 }
