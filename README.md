@@ -9,11 +9,6 @@ El proyecto busca tener la capacidad de predecir, realizar análisis constantes 
 
 La realización de este proyecto se divide en 4 etapas con la ayuda de la metodología ágil SCRUM y haciendo uso del discurso “Elevator Pitch”, con el objetivo de trabajar colaborativamente, en equipo y obtener el mejor resultado posible. Ya que se busca la flexibilidad, productividad, agilidad, calidad y mitigación de los riesgos a la hora de trabajar en el proyecto.
 
-## **Parámetros**
-
-En el repositorio, a la hora de nombrar los commits, deben cumplir con cierto nombramiento, donde se pondra para las tareas [Tk - id] + descripción del cambio. 
-Ej: [Tk-01] Frontend.
-
 ## Autores
 
 Juan Pablo Rojas Higuita
